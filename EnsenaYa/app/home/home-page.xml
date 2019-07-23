@@ -1,0 +1,32 @@
+<Page loaded="pageLoaded" class="page" actionBarHidden="true" xmlns="http://www.nativescript.org/tns.xsd">
+	<FlexboxLayout class="page">
+		<StackLayout class="form">
+			<Image class="logo" src="~/images/logo.png" />
+			<Label class="header" text="APP NAME" />
+
+			<StackLayout class="input-field">
+				<TextField class="input" text="{{ email }}" hint="Correo electrónico" keyboardType="email" autocorrect="false" autocapitalizationType="none"
+				 returnKeyType="next" />
+				<Label class="hr-light" />
+			</StackLayout>
+
+			<StackLayout class="input-field">
+				<TextField id="password" class="input" text="{{ password }}" hint="Contraseña" secure="true" returnKeyType="{{ isLoggingIn ? 'done' : 'next' }}"
+				/>
+				<Label class="hr-light" />
+			</StackLayout>
+
+			<Button text="Iniciar sesión" tap="{{ submit }}" class="btn btn-primary m-t-20" />
+            <Button text="Iniciar sesión linkedin" tap="{{ submit }}" class="btn linkedin m-t-20" />
+			<Label visibility="{{ isLoggingIn ? 'visible' : 'collapse' }}" text="Olvidaste tu contraseña?" class="login-label" tap="{{ forgotPassword }}"
+			/>
+		</StackLayout>
+
+		<Label class="login-label sign-up-label" tap="{{ toggleForm }}">
+			<FormattedString>
+				<Span text="{{ isLoggingIn ? 'Don’t have an account? ' : 'Back to Login' }}" />
+				<Span text="{{ isLoggingIn ? 'Sign up' : '' }}" class="bold" />
+			</FormattedString>
+		</Label>
+	</FlexboxLayout>
+</Page>
