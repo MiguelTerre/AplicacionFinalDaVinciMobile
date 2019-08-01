@@ -17,4 +17,9 @@ components that have the btn class name.
 */
 .btn {
     font-size: 18;
+    color: white;
+    background-color: #74be7f;
+}
+.verde{
+    color: #74be7f;
 }

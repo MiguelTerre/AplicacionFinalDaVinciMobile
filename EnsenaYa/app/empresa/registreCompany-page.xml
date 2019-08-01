@@ -1,0 +1,34 @@
+<Page loaded="pageLoaded" actionBarHidden="true" class="page" xmlns:fl="components/float-label" xmlns="http://www.nativescript.org/tns.xsd">
+	<GridLayout>
+		<ScrollView>
+			<StackLayout class="m-20">
+			    <Label class="h2 text-center verde" text="Registrar mi empresa" textWrap="true"></Label>
+				<Label class="m-b-20" text="Completá los datos para crear una cuenta para tu empresa." textWrap="true"></Label>
+              <GridLayout rows="*, *, *, *, *, *, *, * " columns=", *" class="form">
+                <TextField row="0" col="1" text="{{ Email }}" hint="Email (Usuario del portal)"
+                    class="input input-border" keyboardType="email" />
+
+                <TextField row="1" col="1" text="{{ password }}" secure="true" hint="Ingrese una contraseña"
+                    class="input input-border"  />
+
+                <TextField row="2" col="1" text="{{ cuit }}" hint="CUIT de la empresa"
+                    class="input input-border"/>
+
+                <TextField row="3" col="1" text="{{ rSocial }}" hint="Razón social"
+                    class="input input-border" />
+
+                <TextField row="4" col="1" text="{{ name }}" hint="Nombre de la empresa"
+                    class="input input-border" />
+				<TextField row="5" col="1" text="{{ telefono }}" hint="Teléfono"
+                    class="input input-border" keyboardType="phone"  />
+				<TextField row="6" col="1" text="{{ nameP }}" hint="Tu nombre"
+                    class="input input-border" />
+			    <TextField row="7" col="1" text="{{ lastName }}" hint="Tu apellido"
+                    class="input input-border" />
+            </GridLayout>
+            <Button text="Registrarse" tap="{{ onSend }}" class="btn btn-primary" />
+			<Button text="Cancelar" tap="{{ onCancelar }}" class="btn btn-primary" />
+			</StackLayout>
+		</ScrollView>
+	</GridLayout>
+</Page>
